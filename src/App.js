@@ -1,50 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Route} from 'react-router';
 import {Link} from 'react-router-dom';
+import { Nav, Navbar, Dropdown } from 'react-bootstrap';
 import './App.scss';
 
 
-let projects = [
-    {title: "Django RESTQL", description: "Turn your API into a GraphQL like API", url: "github..."}
-]
-
-let blogs = [
-    {title: "Django RESTQL", url: "github..."}
-]
-
-function App() {
+function SideBar(props) {
     return (
-        <div class="row m-0 p-0">
-            <div class="side-bar sticky-top col-12 col-lg-3">
-                <div class="col-12 bg-white text-center">
-                    <div class="profile-picture mt-4">
-                        <img src="images/yezy.jpg" alt="Picture"/>
-                    </div>
-                </div>
-                <div class="w-100 h-50 col-12 mt-4 bg-white">
-                    <ul class="nav-links m-0 p-0">
-                        <li><Link to="/">Home</Link></li>
-                        <hr class="line p-0 m-0"/>
-                        <li><Link to="/about">About</Link></li>
-                        <hr class="line p-0 m-0"/>
-                        <li><Link to="/projects">Projects</Link></li>
-                        <hr class="line p-0 m-0"/>
-                        <li><Link to="/blogs">Blogs</Link></li>
-                        <hr class="line p-0 m-0"/>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <hr class="line p-0 m-0"/>
-                    </ul>
-
-                    <ul class="social-media m-0 p-0 mt-5 pt-2">
-                        <li><a href="https://github.com/yezyilomo"><span class="icon icon-github"/></a></li>
-                        <li><a href="https://twitter.com/yezyilomo"><span class="icon icon-twitter"/></a></li>
-                        <li><a href="https://www.linkedin.com/in/yezy-ilomo-57b76b140"><span class="icon icon-linkedin"/></a></li>
-                        <li><a href="https://instagram.com/yezyilomo"><span class="icon icon-instagram"/></a></li>
-                        <li><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail"/></a></li>
-                    </ul>
+        <div class={`${props.setting}`}>
+            <div class="col-12 text-center">
+                <div class="profile-picture mt-4">
+                    <img src="images/yezy.jpg" alt="Picture" />
                 </div>
             </div>
+            <div class="col-12 mt-4">
+                <ul class="nav-links m-0 p-0">
+                    <li><Link to="/">Home</Link></li>
+                    <hr class="line p-0 m-0" />
+                    <li><Link to="/about">About</Link></li>
+                    <hr class="line p-0 m-0" />
+                    <li><Link to="/projects">Projects</Link></li>
+                    <hr class="line p-0 m-0" />
+                    <li><Link to="/blogs">Blogs</Link></li>
+                    <hr class="line p-0 m-0" />
+                    <li><Link to="/contact">Contact</Link></li>
+                    <hr class="line p-0 m-0" />
+                </ul>
+            </div>
 
+            <div class="col-12 mt-5">
+                <ul class="social-media m-0 p-0 pt-2">
+                    <li><a href="https://github.com/yezyilomo"><span class="icon icon-github" /></a></li>
+                    <li><a href="https://twitter.com/yezyilomo"><span class="icon icon-twitter" /></a></li>
+                    <li><a href="https://www.linkedin.com/in/yezy-ilomo-57b76b140"><span class="icon icon-linkedin" /></a></li>
+                    <li><a href="https://instagram.com/yezyilomo"><span class="icon icon-instagram" /></a></li>
+                    <li><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail" /></a></li>
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+function App() {
+    const [display, setDisplay] = useState(false)
+    let toggleMenu = (e) => {
+        setDisplay(!display);
+    }
+
+    let getDisplay = () => {
+        if(display){
+            return "";
+        }
+        return "d-none d-lg-block";
+    }
+
+    return (
+        <div class="row m-0 p-0">
+            <div class="nav-toggle d-lg-none">
+                <span class="icon icon-menu" onClick={toggleMenu} />
+            </div>
+            <SideBar setting={`side-bar fixed-top col-8 col-lg-3 bg-white ${getDisplay()}`}/>
+            <div class="col-3 d-none d-lg-block"></div>
             <div class="contents col-12 col-lg-9 p-0 m-0">
                 <Route path="/" exact>
                     <Home/>
@@ -70,43 +86,131 @@ function Home(props){
     return (
         <div class="col-12 m-0 p-0 home">
             <div class="col-12 wrap">
-                <div class="name">
-                    @yezyilomo
-                </div>
+                @yezyilomo
             </div>
 
         </div>
     );
 }
 
-function Projects(props){
+
+function ProjectDetails(props){
     return (
-        <div class="col-12 px-5 pt-4 projects text-secondary">
+        <div class="col-12 m-0 p-0 project-details">
+            <div class="col-12 m-0 text-center project-header">
+                {props.project.title}
+            </div>
+            <div class="col-12 m-0 p-2">
+                {props.project.description}
+            </div>
+        </div>
+    );
+}
+
+function Projects(props){
+    let projects = [
+        {
+            title: "Django RESTQL", 
+            description: "Turn your API made with Django REST Framework(DRF) into a GraphQL like API.", 
+            url: "https://github.com/yezyilomo/django-restql"
+        },
+        {
+            title: "GitHub Auto Deployer", 
+            description: "Automated GitHub Deployment using Webhooks.", 
+            url: "https://github.com/yezyilomo/github-auto-deployer"
+        },
+        {
+            title: "Dictfier", 
+            description: "Python library to convert/serialize class instances(Objects) both flat and nested into a dictionary data structure.", 
+            url: "https://github.com/yezyilomo/dictfier"
+        },
+        {
+            title: "State Pool", 
+            description: "React state management library based on global variables and react hooks.", 
+            url: "https://github.com/yezyilomo/state-pool"
+        },
+        {
+            title: "Odoo REST API", 
+            description: "Module which expose Odoo as a REST API ", 
+            url: "https://github.com/yezyilomo/odoo-rest-api"
+        },
+        {
+            title: "Settle", 
+            description: "Real Estate PWA written with React + Django", 
+            url: "https://yezyilomo.com/"
+        },
+    ]
+    return (
+        <div class="col-12 px-3 px-lg-5  pt-4 pb-4 projects text-secondary">
             <h1 class="section-title text-dark">My Projects</h1>
+            <div class="row p-0 m-0 mt-2 mt-lg-5">
+            {projects.map(project =>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 m-0 p-0 my-3 px-1 px-sm-3">
+                    <ProjectDetails project={project}/>
+                </div>
+            )}
+            <div class="col-12 p-0 m-0 mt-3">
+                <a href="https://github.com/yezyilomo" class=" mx-3 h5">View all projects</a>
+            </div>
+            </div>
+        </div>
+    );
+}
+
+
+function BlogDetails(props){
+    return (
+        <div class="col-12 m-0 p-0 blog-details">
+            <div class="col-12 m-0 blog-header">
+                {props.blog.title}
+            </div>
+            <div class="col-12 m-0 p-2 pb-4">
+                {props.blog.description}
+            </div>
         </div>
     );
 }
 
 function Blogs(props){
+    let blogs = [
+        {
+            title: "Introducing a Simple React State Manager Based on Hooks.", 
+            description: "Redux is a popular state manager in React but despite its popularity it has many problems, the most obvious ones being -Learning curve: Many developers found themselves lost in the Redux world of strange terms, weird entities and the connection between them: thunk, selectors, reducers, actions, middlewares, mapStateToProps, mapDispatchToProps, etc’. Learning...",
+            url: "https://dev.to/yezyilomo/introducing-a-simple-react-state-manager-based-on-hooks-4bc0"
+        },
+        {
+            title: "REST + Some GraphQL with Django REST Framework.", 
+            description: "Since being introduced by Facebook, GraphQL has taken the API world by storm as an alternative to REST APIs. GraphQL fixes many problems that API developers and users have found with RESTful architecture. However, it also introduces a new set of challenges which need to be evaluated. Because GraphQL is not simply a evolutionary replacement for RESTful APIs...",
+            url: "https://dev.to/yezyilomo/rest-some-graphql-with-django-rest-framework-3j25"
+        }
+    ]
+
     return (
-        <div class="col-12 px-5 pt-4 blogs text-secondary">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 blogs text-secondary">
             <h1 class="section-title text-dark">My Blogs</h1>
+            <div class="row p-0 m-0 mt-2 mt-lg-5">
+            {blogs.map(blog =>
+                <div class="col-12 col-sm-12 col-md-6 m-0 p-0 my-3 px-1 px-sm-3">
+                    <BlogDetails blog={blog}/>
+                </div>
+            )}
+            </div>
         </div>
     );
 }
 
 function About(props){
     return (
-        <div class="col-12 px-5 pt-4 about text-secondary">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about text-secondary">
             <h1 class="section-title text-dark">About Me</h1>
-            <h5 class="mt-5 text-secondary">Hi! My name is <span class="text-primary">Yezileli Ilomo</span>.</h5>
+            <h5 class="mt-2 mt-lg-5 text-secondary">Hi! My name is <span class="text-primary">Yezileli Ilomo</span>.</h5>
             <p class="mt-2 text-secondary">
             I am software engineer with a demonstrated history of working 
             in the information technology and services industry. I graduated at the University of 
             Dar es Salaam (UDSM) with a Bachelor Degree of Science in Computer Science in 2018. 
             I have a strong passion for APIs and UIs design and development.
             </p>
-            <div class="row p-0 m-0 mt-5">
+            <div class="row p-0 m-0 mt-2 mt-lg-5">
                 <div class="col-12 col-lg-6 p-0 m-0">
                     <div class="row m-0 p-0 mt-4">
                         <div class="col-1 label-icon"><span class="icon icon-gift"/></div>
@@ -154,7 +258,6 @@ function About(props){
             </div>
             <div class="row mt-5">
                 <a href="Yezileli_Ilomo_CV.pdf" class="btn btn-primary mx-3 button">Download CV</a>
-                <a href="#" class="btn btn-primary ml-5 button">Send Message</a>
             </div>
         </div>
     );
@@ -164,10 +267,10 @@ function About(props){
 
 function Contact(props){
     return (
-        <div class="col-12 px-5 pt-4 contact text-secondary">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 contact text-secondary">
             <h1 class="section-title text-dark">Get in Touch</h1>
 
-            <div class="row p-0 m-0 mt-5">
+            <div class="row p-0 m-0 mt-2 mt-lg-5">
                 <div class="col-12 col-lg-6 p-0 m-0">
                     <div class="row m-0 p-0 mt-4">
                         <div class="col-1 label-icon"><span class="icon icon-location"/></div>
