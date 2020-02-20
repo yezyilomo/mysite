@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {Route} from 'react-router';
 import {Link} from 'react-router-dom';
-import { Nav, Navbar, Dropdown } from 'react-bootstrap';
 import './App.scss';
 
 
@@ -15,15 +14,15 @@ function SideBar(props) {
             </div>
             <div class="col-12 mt-4">
                 <ul class="nav-links m-0 p-0">
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/" onClick={props.hideSideBar}>Home</Link></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/about" onClick={props.hideSideBar}>About</Link></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/projects" onClick={props.hideSideBar}>Projects</Link></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/blogs">Blogs</Link></li>
+                    <li><Link to="/blogs" onClick={props.hideSideBar}>Blogs</Link></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/contact" onClick={props.hideSideBar}>Contact</Link></li>
                     <hr class="line p-0 m-0" />
                 </ul>
             </div>
@@ -54,14 +53,18 @@ function App() {
         return "d-none d-lg-block";
     }
 
+    let hideSideBar = () => {
+        setDisplay(false);
+    }
+
     return (
         <div class="row m-0 p-0">
             <div class="nav-toggle d-lg-none">
                 <span class="icon icon-menu" onClick={toggleMenu} />
             </div>
-            <SideBar setting={`side-bar fixed-top col-8 col-lg-3 bg-white ${getDisplay()}`}/>
+            <SideBar hideSideBar={hideSideBar} setting={`side-bar fixed-top col-12 col-lg-3 bg-white ${getDisplay()}`}/>
             <div class="col-3 d-none d-lg-block"></div>
-            <div class="contents col-12 col-lg-9 p-0 m-0">
+            <div class="contents col-12 col-lg-9 p-0 m-0" onClick={e=>setDisplay(false)}>
                 <Route path="/" exact>
                     <Home/>
                 </Route>
@@ -83,12 +86,27 @@ function App() {
 }
 
 function Home(props){
+    const fonts = ['Montez', 'Sacramento', 'Grand Hotel'];
+    const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+    const fontStyle = {
+        "font-family": `'${randomFont}', cursive`
+    }
     return (
-        <div class="col-12 m-0 p-0 home">
-            <div class="col-12 wrap">
-                @yezyilomo
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 home text-secondary">
+            <div class="col-12 name text-center" style={fontStyle}>
+                <div class="profile-picture ">
+                    <img src="images/yezy.jpg" alt="Picture" />
+                </div>
+                Yezileli Ilomo
             </div>
-
+            <div class="row quotes mt-4">
+                <div class="col-12 col-lg-6 mt-3">
+                “A language that doesn't affect the way you think about programming is not worth knowing.” 
+                </div>
+                <div class="col-12 col-lg-6 mt-3">
+                “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” 
+                </div>
+            </div>
         </div>
     );
 }
@@ -141,7 +159,7 @@ function Projects(props){
         },
     ]
     return (
-        <div class="col-12 px-3 px-lg-5  pt-4 pb-4 projects text-secondary">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 projects text-secondary">
             <h1 class="section-title text-dark">My Projects</h1>
             <div class="row p-0 m-0 mt-2 mt-lg-5">
             {projects.map(project =>
@@ -200,6 +218,17 @@ function Blogs(props){
 }
 
 function About(props){
+    function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
     return (
         <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about text-secondary">
             <h1 class="section-title text-dark">About Me</h1>
@@ -237,7 +266,7 @@ function About(props){
                     <div class="row m-0 p-0 mt-4">
                         <div class="col-1 label-icon"><span class="icon icon-calendar"/></div>
                         <div class="col-3 label">Age:</div>
-                        <div class="col">24</div>
+                        <div class="col"> {getAge('1995-07-27')} </div>
                     </div>
                     <div class="row m-0 p-0 mt-4">
                         <div class="col-1 label-icon"><span class="icon icon-console"/></div>
