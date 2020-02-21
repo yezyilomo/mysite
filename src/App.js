@@ -1,12 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Route} from 'react-router';
 import {Link} from 'react-router-dom';
 import './App.scss';
 
 
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function setThemeCookie(theme = false) {
+    let intStates = new Map();
+    intStates.set(false, 0);
+    intStates.set(true, 1);
+    theme = intStates.get(theme);
+    var d = new Date();
+    d.setTime(d.getTime() + 30 * 24 * 60 * 60 * 1000); // in milliseconds
+    document.cookie = `theme=${theme};path=/;expires=${d.toGMTString()};SameSite=Lax;`;
+}
+
+function getThemeCookie() {
+    let theme = getCookie('theme');
+    if (theme === null) {
+        return null;
+    }
+    theme = parseInt(theme, 10);
+    theme = Boolean(theme);
+    return theme;
+}
+
+
+function ToggleLightButton(props) {
+    let themeStates = new Map();
+    themeStates.set(false, { bulbClassName: 'light-on', bodyClassName: 'app-light'});
+    themeStates.set(true, { bulbClassName: 'light-off', bodyClassName: 'app-dark'});
+
+    let savedTheme = getThemeCookie();
+    if (savedTheme === null) {
+        setThemeCookie(false);
+        savedTheme = false;
+    }
+
+    let [theme, setTheme] = useState(savedTheme);
+
+    useEffect(() => {
+        var metaThemeColor = document.querySelector("meta[name=theme-color]");
+        if(theme){
+            metaThemeColor.setAttribute("content", "rgb(0, 132, 137)");
+        }
+        else{
+            metaThemeColor.setAttribute("content", "white)");
+        }
+        let container = document.getElementsByTagName("body")[0];
+        container.className = themeStates.get(theme).bodyClassName;
+    }, [theme]);
+
+    let handleButtonToggle = (event) => {
+        setThemeCookie(!theme);
+        setTheme(!theme);
+    }
+
+    return (
+        <div class="toggle-button" onClick={handleButtonToggle}>
+            <div class={`string-${themeStates.get(theme).bulbClassName}`}></div>
+            <span class={`icon icon-idea ${themeStates.get(theme).bulbClassName}`}/>
+        </div>
+    );
+}
+
+
 function SideBar(props) {
     return (
         <div class={`${props.setting}`}>
+            <ToggleLightButton/>
             <div class="col-12 text-center">
                 <div class="profile-picture mt-4">
                     <img src="images/yezy.jpg" alt="Picture" />
@@ -62,7 +138,7 @@ function App() {
             <div class="nav-toggle d-lg-none">
                 <span class="icon icon-menu" onClick={toggleMenu} />
             </div>
-            <SideBar hideSideBar={hideSideBar} setting={`side-bar fixed-top col-12 col-lg-3 bg-white ${getDisplay()}`}/>
+            <SideBar hideSideBar={hideSideBar} setting={`side-bar fixed-top col-10 col-lg-3 ${getDisplay()}`}/>
             <div class="col-3 d-none d-lg-block"></div>
             <div class="contents col-12 col-lg-9 p-0 m-0" onClick={e=>setDisplay(false)}>
                 <Route path="/" exact>
@@ -92,7 +168,7 @@ function Home(props){
         "font-family": `'${randomFont}', cursive`
     }
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 home text-secondary">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 home">
             <div class="col-12 name text-center" style={fontStyle}>
                 <div class="profile-picture ">
                     <img src="images/yezy.jpg" alt="Picture" />
@@ -167,8 +243,8 @@ function Projects(props){
         },
     ]
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 projects text-secondary">
-            <h1 class="section-title text-secondary">My Projects</h1>
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 projects">
+            <h1 class="section-title">My Projects</h1>
             <div class="row p-0 m-0 mt-2 mt-lg-5">
             {projects.map(project =>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 m-0 p-0 my-3 px-1 px-sm-3">
@@ -220,8 +296,8 @@ function Blogs(props){
     ]
 
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 blogs text-secondary">
-            <h1 class="section-title text-secondary">My Blogs</h1>
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 blogs">
+            <h1 class="section-title">My Blogs</h1>
             <div class="row p-0 m-0 mt-2 mt-lg-5">
             {blogs.map(blog =>
                 <div class="col-12 col-sm-12 col-md-6 m-0 p-0 my-3 px-1 px-sm-3">
@@ -246,10 +322,10 @@ function About(props){
     }
 
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about text-secondary">
-            <h1 class="section-title text-secondary">About Me</h1>
-            <h5 class="mt-2 mt-lg-5 text-secondary">Hi! My name is <span class="my-name">Yezileli Ilomo</span>.</h5>
-            <p class="mt-2 text-secondary">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about">
+            <h1 class="section-title">About Me</h1>
+            <h5 class="mt-2 mt-lg-5">Hi! My name is <span class="my-name">Yezileli Ilomo</span>.</h5>
+            <p class="mt-2">
             I am software engineer with a demonstrated history of working 
             in the information technology and services industry. I graduated at the University of 
             Dar es Salaam (UDSM) with a Bachelor Degree of Science in Computer Science in 2018. 
@@ -312,8 +388,8 @@ function About(props){
 
 function Contact(props){
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 contact text-secondary">
-            <h1 class="section-title text-secondary">Get in Touch</h1>
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 contact">
+            <h1 class="section-title">Get in Touch</h1>
 
             <div class="row p-0 m-0 mt-2 mt-lg-5">
                 <div class="col-12 col-lg-6 p-0 m-0">

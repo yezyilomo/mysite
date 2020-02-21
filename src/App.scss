@@ -1,5 +1,60 @@
 @import './variables.scss';
 
+$dark-bg: #15202b;
+
+.app-light{
+  color: $secondary;
+  background-color: white;
+  .side-bar{
+    background-color: white;
+  }
+}
+
+.app-dark{
+  color: white;
+  background-color: $dark-bg;
+  .side-bar{
+    box-shadow: 1px 0 0 $secondary;
+    background-color: $dark-bg;
+  }
+  .icon{
+    background-color: $secondary;
+  }
+
+  .line{
+    background-color: $secondary;
+  }
+
+  .project-details{
+    box-shadow: 0 0 0 black;
+    border-color: $dark-bg;
+    background-color: lighten($dark-bg, 10%);
+    .project-header{
+      background-color: lighten($dark-bg, 6%); 
+      border-color: lighten($dark-bg, 6%); 
+    }
+  }
+
+  .project-details:hover{
+    box-shadow: 0 0 0 black;
+  }
+
+  .blog-details{
+    box-shadow: 0 0 0 black;
+    border-color: $dark-bg;
+    background-color: lighten($dark-bg, 10%);
+    .blog-header{
+      background-color: lighten($dark-bg, 6%);
+      border-color: lighten($dark-bg, 6%); 
+    }
+  }
+
+  .blog-details:hover{
+    box-shadow: 0 0 0 black;
+  }
+}
+
+
 .nav-toggle{
   position: fixed;
   right: 15px;
@@ -18,6 +73,7 @@
   box-shadow: 0 0 20px rgb(228, 228, 228);
   font-size: 20px;
   font-weight: 400;
+  background-color: inherit;
 }
 
 a{
@@ -36,7 +92,8 @@ a:hover{
   max-height: 240px;
   max-width: 240px;
   margin: 0 auto 0 auto;
-  border: solid 8px rgb(223, 223, 223);
+  border: solid 8px rgb(211, 211, 211);
+  background-color: rgb(211, 211, 211);
 }
 
 .profile-picture img{
@@ -234,4 +291,40 @@ a:hover{
   font-weight: 500;
   padding: 5px 5px;
   border-bottom: solid 1px #e2e2e2;
+}
+
+
+
+
+
+.toggle-button{
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.toggle-button .string-light-on{
+  height: 20px;
+  position: relative;
+  left: 24px;
+  border-left: solid 2px $secondary;
+}
+
+.toggle-button .string-light-off{
+  height: 20px;
+  position: relative;
+  left: 24px;
+  border-left: solid 2px $primaryColor;
+}
+
+.toggle-button .icon-idea{
+  width: 50px;
+  height: 50px;
+  transition: all .3s;
+}
+
+.toggle-button .light-off{
+  background-color: $primaryColor;
+  margin-top: 5px;
 }
