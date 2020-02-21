@@ -62,6 +62,10 @@ a:hover{
   margin: 0 15px;
 }
 
+.social-media li .icon{
+  transition: all .2s;
+}
+
 .social-media li .icon:hover{
   background-color: $primary;
 }
@@ -86,10 +90,6 @@ a:hover{
 }
 
 
-
-.home{
-
-}
 
 .home .name{
   font-size: 5em;
@@ -123,13 +123,17 @@ a:hover{
 
 .project-details{
   height: 200px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 15px 15px 15px rgb(243, 243, 243);
+  box-shadow: 10px 10px 10px rgb(243, 243, 243);
   cursor: pointer;
   background-color: #fcfcfc;
   transition: all .3s;
   border: solid 1px #ebebeb;
+}
+
+.project-header{
+  transition: all .3s;
 }
 
 .project-details:hover {
@@ -171,13 +175,17 @@ a:hover{
 .blog-details{
   word-spacing: 5px;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 15px 15px 15px rgb(243, 243, 243);
+  box-shadow: 10px 10px 10px rgb(243, 243, 243);
   cursor: pointer;
   background-color: #fcfcfc;
   transition: all .3s;
   border: solid 1px #ebebeb;
+}
+
+.blog-header{
+  transition: all .3s;
 }
 
 .blog-details:hover {
