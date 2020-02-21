@@ -114,14 +114,16 @@ function Home(props){
 
 function ProjectDetails(props){
     return (
-        <div class="col-12 m-0 p-0 project-details">
-            <div class="col-12 m-0 text-center project-header">
-                {props.project.title}
+        <a href={props.project.url} class="project-link">
+            <div class="col-12 m-0 p-0 project-details">
+                <div class="col-12 m-0 text-center project-header">
+                    {props.project.title}
+                </div>
+                <div class="col-12 m-0 p-2">
+                    {props.project.description}
+                </div>
             </div>
-            <div class="col-12 m-0 p-2">
-                {props.project.description}
-            </div>
-        </div>
+        </a>
     );
 }
 
@@ -129,32 +131,32 @@ function Projects(props){
     let projects = [
         {
             title: "Django RESTQL", 
-            description: "Turn your API made with Django REST Framework(DRF) into a GraphQL like API.", 
+            description: "Django RESTQL is a python library which allows you to turn your API made with Django REST Framework(DRF) into a GraphQL like API.", 
             url: "https://github.com/yezyilomo/django-restql"
         },
         {
             title: "GitHub Auto Deployer", 
-            description: "Automated GitHub Deployment using Webhooks.", 
+            description: "This is a tool for automating Deployments from GitHub to any server using GitHub's Webhooks with simple configurations.", 
             url: "https://github.com/yezyilomo/github-auto-deployer"
         },
         {
             title: "Dictfier", 
-            description: "Python library to convert/serialize class instances(Objects) both flat and nested into a dictionary data structure.", 
+            description: "Python library to convert/serialize class instances(Objects) both flat and nested into a dictionary data structure. It's very useful in converting Python Objects into JSON format.", 
             url: "https://github.com/yezyilomo/dictfier"
         },
         {
             title: "State Pool", 
-            description: "React state management library based on global variables and react hooks.", 
+            description: "React state management library based on global variables and react hooks. With this there no need for Provider component or using Contex API at all, it works like react state hooks.", 
             url: "https://github.com/yezyilomo/state-pool"
         },
         {
             title: "Odoo REST API", 
-            description: "Module which expose Odoo as a REST API ", 
+            description: "This is a module which expose Odoo ERP as a REST API, You can use this API to integrate Odoo ERP with external services.", 
             url: "https://github.com/yezyilomo/odoo-rest-api"
         },
         {
             title: "Settle", 
-            description: "Real Estate PWA written with React + Django", 
+            description: "Real Estate Progressive Web App(PWA) written with React + Django. The API is powered by Django REST framework + Django RESTQL.", 
             url: "https://yezyilomo.com/"
         },
     ]
@@ -178,14 +180,16 @@ function Projects(props){
 
 function BlogDetails(props){
     return (
-        <div class="col-12 m-0 p-0 blog-details">
-            <div class="col-12 m-0 blog-header">
-                {props.blog.title}
+        <a href={props.blog.url} class="blog-link">
+            <div class="col-12 m-0 p-0 blog-details">
+                <div class="col-12 m-0 blog-header">
+                    {props.blog.title}
+                </div>
+                <div class="col-12 m-0 p-2 pb-4">
+                    {props.blog.description}
+                </div>
             </div>
-            <div class="col-12 m-0 p-2 pb-4">
-                {props.blog.description}
-            </div>
-        </div>
+        </a>
     );
 }
 
@@ -193,12 +197,12 @@ function Blogs(props){
     let blogs = [
         {
             title: "Introducing a Simple React State Manager Based on Hooks.", 
-            description: "Redux is a popular state manager in React but despite its popularity it has many problems, the most obvious ones being -Learning curve: Many developers found themselves lost in the Redux world of strange terms, weird entities and the connection between them: thunk, selectors, reducers, actions, middlewares, mapStateToProps, mapDispatchToProps, etc’. Learning...",
+            description: "Redux is a popular state manager in React but despite its popularity it has many problems, the most obvious ones being -Learning curve: Many developers found themselves lost in the Redux world of strange terms, weird entities and the connection between them: thunk, selectors, reducers, actions, middlewares, mapStateToProps, mapDispatchToProps, etc. Learning all this ...",
             url: "https://dev.to/yezyilomo/introducing-a-simple-react-state-manager-based-on-hooks-4bc0"
         },
         {
             title: "REST + Some GraphQL with Django REST Framework.", 
-            description: "Since being introduced by Facebook, GraphQL has taken the API world by storm as an alternative to REST APIs. GraphQL fixes many problems that API developers and users have found with RESTful architecture. However, it also introduces a new set of challenges which need to be evaluated. Because GraphQL is not simply a evolutionary replacement for RESTful APIs...",
+            description: "Since being introduced by Facebook, GraphQL has taken the API world by storm as an alternative to REST APIs. GraphQL fixes many problems that API developers and users have found with RESTful architecture. However, it also introduces a new set of challenges which need to be evaluated. Because GraphQL is not simply a evolutionary replacement for RESTful APIs ...",
             url: "https://dev.to/yezyilomo/rest-some-graphql-with-django-rest-framework-3j25"
         }
     ]
@@ -242,7 +246,7 @@ function About(props){
             <div class="row p-0 m-0 mt-2 mt-lg-5">
                 <div class="col-12 col-lg-6 p-0 m-0">
                     <div class="row m-0 p-0 mt-4">
-                        <div class="col-1 label-icon"><span class="icon icon-gift"/></div>
+                        <div class="col-1 label-icon"><span class="icon icon-birthday"/></div>
                         <div class="col-3 label">Birthday:</div>
                         <div class="col">27th July</div>
                     </div>
@@ -335,6 +339,11 @@ function Contact(props){
                         <div class="col-1 label-icon"><span class="icon icon-whatsapp"/></div>
                         <div class="col-3 label">WhatsApp:</div>
                         <div class="col"><a href="tel:+255767461707">+255 767 461 707</a></div>
+                    </div>
+                    <div class="row m-0 p-0 mt-4">
+                        <div class="col-1 label-icon"><span class="icon icon-web"/></div>
+                        <div class="col-3 label">Website:</div>
+                        <div class="col"><a href="https://yezyilomo.com">yezyilomo.com</a></div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 p-0 m-0">
