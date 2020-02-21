@@ -71,8 +71,8 @@ function ToggleLightButton(props) {
     }
 
     return (
-        <div class="toggle-button" onClick={handleButtonToggle}>
-            <div class={`string-${themeStates.get(theme).bulbClassName}`}></div>
+        <div class="toggle-light-button" onClick={handleButtonToggle}>
+            <div class={`string string-${themeStates.get(theme).bulbClassName}`}/>
             <span class={`icon icon-idea ${themeStates.get(theme).bulbClassName}`}/>
         </div>
     );
@@ -239,7 +239,7 @@ function Projects(props){
         {
             title: "Settle", 
             description: "Real Estate Progressive Web App(PWA) written with React + Django. The API is powered by Django REST framework + Django RESTQL.", 
-            url: "https://yezyilomo.com/"
+            url: "https://settle.yezyilomo.com/"
         },
     ]
     return (
