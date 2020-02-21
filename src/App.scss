@@ -2,6 +2,18 @@
 
 $dark-bg: #15202b;
 
+a{
+  text-decoration: none;
+  color: $primaryColor;
+}
+
+a:hover{
+  text-decoration: none;
+  color: darken($primaryColor, 10%);
+}
+
+
+
 .app-light{
   color: $secondary;
   background-color: white;
@@ -14,8 +26,8 @@ $dark-bg: #15202b;
   color: white;
   background-color: $dark-bg;
   .side-bar{
-    box-shadow: 1px 0 0 $secondary;
-    background-color: $dark-bg;
+    box-shadow: 0 0 0 $secondary;
+    background-color: lighten($dark-bg, 4%);
   }
   .icon{
     background-color: $secondary;
@@ -55,6 +67,7 @@ $dark-bg: #15202b;
 }
 
 
+
 .nav-toggle{
   position: fixed;
   right: 15px;
@@ -67,6 +80,8 @@ $dark-bg: #15202b;
   height: 40px;
 }
 
+
+
 .side-bar{
   height: 100vh;
   top: 0;
@@ -74,16 +89,6 @@ $dark-bg: #15202b;
   font-size: 20px;
   font-weight: 400;
   background-color: inherit;
-}
-
-a{
-  text-decoration: none;
-  color: $primaryColor;
-}
-
-a:hover{
-  text-decoration: none;
-  color: darken($primaryColor, 15%);
 }
 
 .profile-picture{
@@ -129,6 +134,8 @@ a:hover{
   background-color: $primaryColor;
 }
 
+
+
 .about{
   word-spacing: 5px;
   font-size: 1.1em;
@@ -155,6 +162,7 @@ a:hover{
 }
 
 
+
 .home .name{
   font-size: 5em;
 }
@@ -164,6 +172,8 @@ a:hover{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
 }
+
+
 
 .contact{
   word-spacing: 5px;
@@ -184,21 +194,6 @@ a:hover{
 }
 
 
-
-.project-details{
-  height: 200px;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 10px 10px 10px rgb(243, 243, 243);
-  cursor: pointer;
-  background-color: #fcfcfc;
-  transition: all .3s;
-  border: solid 1px #ebebeb;
-}
-
-.project-header{
-  transition: all .3s;
-}
 
 .window-dot{
   width: 12px;
@@ -222,6 +217,24 @@ a:hover{
 
 .dot-2{
   background-color: $primaryColor;
+}
+
+
+
+.project-details{
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgb(243, 243, 243);
+  cursor: pointer;
+  background-color: #fcfcfc;
+  transition: background-color .3s, transform .3s;
+  border: solid 1px #ebebeb;
+  transform: translateY(0);
+}
+
+.project-header{
+  transition: all .3s;
 }
 
 .project-details:hover {
@@ -248,7 +261,6 @@ a:hover{
 
 
 
-
 .blog-link, .project-link{
   text-decoration: none;
   color: unset;
@@ -260,6 +272,9 @@ a:hover{
   color: unset;
 }
 
+
+
+
 .blog-details{
   word-spacing: 5px;
   height: auto;
@@ -268,8 +283,9 @@ a:hover{
   box-shadow: 10px 10px 10px rgb(243, 243, 243);
   cursor: pointer;
   background-color: #fcfcfc;
-  transition: all .3s;
+  transition: background-color .3s, transform .3s;
   border: solid 1px #ebebeb;
+  transform: translateY(0);
 }
 
 .blog-header{
@@ -295,36 +311,41 @@ a:hover{
 
 
 
-
-
-.toggle-button{
+.toggle-light-button{
   position: absolute;
   left: 10px;
   cursor: pointer;
   z-index: 1;
 }
 
-.toggle-button .string-light-on{
-  height: 20px;
+.toggle-light-button .string{
+  height: 23px;
   position: relative;
   left: 24px;
-  border-left: solid 2px $secondary;
+  border-left: solid 2px transparent;
+  transition: border-color .3s;
 }
 
-.toggle-button .string-light-off{
-  height: 20px;
-  position: relative;
-  left: 24px;
-  border-left: solid 2px $primaryColor;
+.toggle-light-button .string-light-on{
+  border-color: rgb(105, 105, 105);
 }
 
-.toggle-button .icon-idea{
+.toggle-light-button .string-light-off{
+  border-color: $primaryColor;
+}
+
+.toggle-light-button .icon-idea{
   width: 50px;
   height: 50px;
   transition: all .3s;
 }
 
-.toggle-button .light-off{
+.toggle-light-button .light-on{
+  background-color: rgb(75, 75, 75);
+  margin-top: -1px;
+}
+
+.toggle-light-button .light-off{
   background-color: $primaryColor;
-  margin-top: 5px;
+  margin-top: 7px;
 }
