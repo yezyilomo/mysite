@@ -22,10 +22,12 @@
 
 a{
   text-decoration: none;
+  color: $primaryColor;
 }
 
 a:hover{
   text-decoration: none;
+  color: darken($primaryColor, 15%);
 }
 
 .profile-picture{
@@ -62,8 +64,12 @@ a:hover{
   margin: 0 15px;
 }
 
+.social-media li .icon{
+  transition: all .1s;
+}
+
 .social-media li .icon:hover{
-  background-color: $primary;
+  background-color: $primaryColor;
 }
 
 .about{
@@ -71,8 +77,12 @@ a:hover{
   font-size: 1.1em;
 }
 
+.about .my-name{
+  color: $primaryColor;
+}
+
 .about .label-icon span{
-  background-color: $primary;
+  background-color: $primaryColor;
   margin-top: 3px;
 }
 
@@ -83,13 +93,10 @@ a:hover{
 .about .button{
   font-size: 1.1em;
   font-weight: 300;
+  background-color: $primaryColor;
+  border-width: 0;
 }
 
-
-
-.home{
-
-}
 
 .home .name{
   font-size: 5em;
@@ -107,7 +114,7 @@ a:hover{
 }
 
 .contact .label-icon span{
-  background-color: $primary;
+  background-color: $primaryColor;
 }
 
 .contact .label{
@@ -123,13 +130,41 @@ a:hover{
 
 .project-details{
   height: 200px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 15px 15px 15px rgb(243, 243, 243);
+  box-shadow: 10px 10px 10px rgb(243, 243, 243);
   cursor: pointer;
   background-color: #fcfcfc;
   transition: all .3s;
   border: solid 1px #ebebeb;
+}
+
+.project-header{
+  transition: all .3s;
+}
+
+.window-dot{
+  width: 12px;
+  height: 12px;
+  background-color: rgb(165, 165, 165);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-1-container{
+  padding-right: 2px;
+}
+
+.dot-2-container{
+  padding-left: 2px;
+}
+
+.dot-1{
+  background-color: rgb(165, 165, 165);
+}
+
+.dot-2{
+  background-color: $primaryColor;
 }
 
 .project-details:hover {
@@ -138,7 +173,7 @@ a:hover{
 }
 
 .project-details:hover .project-header {
-  color: $primary;
+  color: $primaryColor;
 }
 
 .project-header{
@@ -171,13 +206,17 @@ a:hover{
 .blog-details{
   word-spacing: 5px;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 15px 15px 15px rgb(243, 243, 243);
+  box-shadow: 10px 10px 10px rgb(243, 243, 243);
   cursor: pointer;
   background-color: #fcfcfc;
   transition: all .3s;
   border: solid 1px #ebebeb;
+}
+
+.blog-header{
+  transition: all .3s;
 }
 
 .blog-details:hover {
@@ -186,7 +225,7 @@ a:hover{
 }
 
 .blog-details:hover .blog-header {
-  color: $primary;
+  color: $primaryColor;
 }
 
 .blog-header{
