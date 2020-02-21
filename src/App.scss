@@ -22,10 +22,12 @@
 
 a{
   text-decoration: none;
+  color: $primaryColor;
 }
 
 a:hover{
   text-decoration: none;
+  color: darken($primaryColor, 15%);
 }
 
 .profile-picture{
@@ -63,11 +65,11 @@ a:hover{
 }
 
 .social-media li .icon{
-  transition: all .2s;
+  transition: all .1s;
 }
 
 .social-media li .icon:hover{
-  background-color: $primary;
+  background-color: $primaryColor;
 }
 
 .about{
@@ -75,8 +77,12 @@ a:hover{
   font-size: 1.1em;
 }
 
+.about .my-name{
+  color: $primaryColor;
+}
+
 .about .label-icon span{
-  background-color: $primary;
+  background-color: $primaryColor;
   margin-top: 3px;
 }
 
@@ -87,8 +93,9 @@ a:hover{
 .about .button{
   font-size: 1.1em;
   font-weight: 300;
+  background-color: $primaryColor;
+  border-width: 0;
 }
-
 
 
 .home .name{
@@ -107,7 +114,7 @@ a:hover{
 }
 
 .contact .label-icon span{
-  background-color: $primary;
+  background-color: $primaryColor;
 }
 
 .contact .label{
@@ -136,13 +143,37 @@ a:hover{
   transition: all .3s;
 }
 
+.window-dot{
+  width: 12px;
+  height: 12px;
+  background-color: rgb(165, 165, 165);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-1-container{
+  padding-right: 2px;
+}
+
+.dot-2-container{
+  padding-left: 2px;
+}
+
+.dot-1{
+  background-color: rgb(165, 165, 165);
+}
+
+.dot-2{
+  background-color: $primaryColor;
+}
+
 .project-details:hover {
   box-shadow: 15px 15px 15px rgb(231, 231, 231);
   transform: translateY(-5px);
 }
 
 .project-details:hover .project-header {
-  color: $primary;
+  color: $primaryColor;
 }
 
 .project-header{
@@ -194,7 +225,7 @@ a:hover{
 }
 
 .blog-details:hover .blog-header {
-  color: $primary;
+  color: $primaryColor;
 }
 
 .blog-header{

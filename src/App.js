@@ -29,11 +29,11 @@ function SideBar(props) {
 
             <div class="col-12 mt-5">
                 <ul class="social-media m-0 p-0 pt-2">
-                    <li><a href="https://github.com/yezyilomo"><span class="icon icon-github" /></a></li>
-                    <li><a href="https://twitter.com/yezyilomo"><span class="icon icon-twitter" /></a></li>
-                    <li><a href="https://www.linkedin.com/in/yezy-ilomo-57b76b140"><span class="icon icon-linkedin" /></a></li>
-                    <li><a href="https://instagram.com/yezyilomo"><span class="icon icon-instagram" /></a></li>
-                    <li><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail-bold" /></a></li>
+                    <li><a href="https://github.com/yezyilomo"><span class="icon icon-github"/></a></li>
+                    <li><a href="https://twitter.com/yezyilomo"><span class="icon icon-twitter"/></a></li>
+                    <li><a href="https://www.linkedin.com/in/yezy-ilomo-57b76b140"><span class="icon icon-linkedin"/></a></li>
+                    <li><a href="https://instagram.com/yezyilomo"><span class="icon icon-instagram"/></a></li>
+                    <li><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail-bold"/></a></li>
                 </ul>
             </div>
         </div>
@@ -116,8 +116,14 @@ function ProjectDetails(props){
     return (
         <a href={props.project.url} class="project-link">
             <div class="col-12 m-0 p-0 project-details">
-                <div class="col-12 m-0 project-header">
-                    <span class="icon icon-github"/> {props.project.title}
+                <div class="row col-12 m-0 project-header">
+                    <div class="col-10 p-0 m-0">
+                        <span class="icon icon-github"/> {props.project.title}
+                    </div>
+                    <div class="col-2 p-0 m-0 text-right">
+                        <span class="dot-1-container"><div class="window-dot dot-1"></div></span>
+                        <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
+                    </div>
                 </div>
                 <div class="col-12 m-0 p-2">
                     {props.project.description}
@@ -135,7 +141,7 @@ function Projects(props){
             url: "https://github.com/yezyilomo/django-restql"
         },
         {
-            title: "GitHub Auto Deployer", 
+            title: "GitHub Deployer", 
             description: "This is a tool for automating Deployments from GitHub to any server using GitHub's Webhooks with simple configurations.", 
             url: "https://github.com/yezyilomo/github-auto-deployer"
         },
@@ -162,7 +168,7 @@ function Projects(props){
     ]
     return (
         <div class="col-12 px-3 px-lg-5 pt-4 pb-4 projects text-secondary">
-            <h1 class="section-title text-dark">My Projects</h1>
+            <h1 class="section-title text-secondary">My Projects</h1>
             <div class="row p-0 m-0 mt-2 mt-lg-5">
             {projects.map(project =>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 m-0 p-0 my-3 px-1 px-sm-3">
@@ -182,8 +188,14 @@ function BlogDetails(props){
     return (
         <a href={props.blog.url} class="blog-link">
             <div class="col-12 m-0 p-0 blog-details">
-                <div class="col-12 m-0 blog-header">
-                    <span class="icon icon-quill"/> {props.blog.title}
+                <div class="row col-12 m-0 blog-header">
+                    <div class="col-10 p-0 m-0">
+                        <span class="icon icon-quill"/> {props.blog.title}
+                    </div>
+                    <div class="col-2 p-0 m-0 text-right">
+                        <span class="dot-1-container"><div class="window-dot dot-1"></div></span>
+                        <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
+                    </div>
                 </div>
                 <div class="col-12 m-0 p-2 pb-4">
                     {props.blog.description}
@@ -209,7 +221,7 @@ function Blogs(props){
 
     return (
         <div class="col-12 px-3 px-lg-5 pt-4 pb-4 blogs text-secondary">
-            <h1 class="section-title text-dark">My Blogs</h1>
+            <h1 class="section-title text-secondary">My Blogs</h1>
             <div class="row p-0 m-0 mt-2 mt-lg-5">
             {blogs.map(blog =>
                 <div class="col-12 col-sm-12 col-md-6 m-0 p-0 my-3 px-1 px-sm-3">
@@ -235,8 +247,8 @@ function About(props){
 
     return (
         <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about text-secondary">
-            <h1 class="section-title text-dark">About Me</h1>
-            <h5 class="mt-2 mt-lg-5 text-secondary">Hi! My name is <span class="text-primary">Yezileli Ilomo</span>.</h5>
+            <h1 class="section-title text-secondary">About Me</h1>
+            <h5 class="mt-2 mt-lg-5 text-secondary">Hi! My name is <span class="my-name">Yezileli Ilomo</span>.</h5>
             <p class="mt-2 text-secondary">
             I am software engineer with a demonstrated history of working 
             in the information technology and services industry. I graduated at the University of 
@@ -301,7 +313,7 @@ function About(props){
 function Contact(props){
     return (
         <div class="col-12 px-3 px-lg-5 pt-4 pb-4 contact text-secondary">
-            <h1 class="section-title text-dark">Get in Touch</h1>
+            <h1 class="section-title text-secondary">Get in Touch</h1>
 
             <div class="row p-0 m-0 mt-2 mt-lg-5">
                 <div class="col-12 col-lg-6 p-0 m-0">
