@@ -33,7 +33,7 @@ function SideBar(props) {
                     <li><a href="https://twitter.com/yezyilomo"><span class="icon icon-twitter" /></a></li>
                     <li><a href="https://www.linkedin.com/in/yezy-ilomo-57b76b140"><span class="icon icon-linkedin" /></a></li>
                     <li><a href="https://instagram.com/yezyilomo"><span class="icon icon-instagram" /></a></li>
-                    <li><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail" /></a></li>
+                    <li><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail-bold" /></a></li>
                 </ul>
             </div>
         </div>
@@ -116,8 +116,8 @@ function ProjectDetails(props){
     return (
         <a href={props.project.url} class="project-link">
             <div class="col-12 m-0 p-0 project-details">
-                <div class="col-12 m-0 text-center project-header">
-                    {props.project.title}
+                <div class="col-12 m-0 project-header">
+                    <span class="icon icon-github"/> {props.project.title}
                 </div>
                 <div class="col-12 m-0 p-2">
                     {props.project.description}
@@ -183,7 +183,7 @@ function BlogDetails(props){
         <a href={props.blog.url} class="blog-link">
             <div class="col-12 m-0 p-0 blog-details">
                 <div class="col-12 m-0 blog-header">
-                    {props.blog.title}
+                    <span class="icon icon-quill"/> {props.blog.title}
                 </div>
                 <div class="col-12 m-0 p-2 pb-4">
                     {props.blog.description}
