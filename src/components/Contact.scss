@@ -1,0 +1,21 @@
+@import '../variables.scss';
+
+
+.contact{
+    word-spacing: 5px;
+    font-size: 1.1em;
+  }
+  
+  .contact .label-icon span{
+    background-color: $primaryColor;
+  }
+  
+  .contact .label{
+    font-weight: 600;
+  }
+  
+  .contact .button{
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+  

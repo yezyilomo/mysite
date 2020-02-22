@@ -1,3 +1,6 @@
+@import './variables.scss';
+
+
 * {
   box-sizing: border-box;
 }
@@ -9,4 +12,131 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+a{
+  text-decoration: none;
+  color: $primaryColor;
+}
+
+a:hover{
+  text-decoration: none;
+  color: darken($primaryColor, 10%);
+}
+
+.line{
+  transition: background-color .3s;
+}
+
+
+
+// Dark Theme
+.app-light{
+  color: $secondary;
+  background-color: white;
+  transition: background-color .3s;
+  .side-bar{
+    background-color: white;
+    transition: background-color .3s, box-shadow .4s;
+  }
+}
+
+// Dark Theme
+.app-dark{
+  color: white;
+  background-color: $dark-bg;
+  transition: background-color .3s;
+  .side-bar{
+    transition: background-color .3s, box-shadow 0s;
+    box-shadow: 0 0 0 $secondary;
+    background-color: lighten($dark-bg, 4%);
+  }
+
+  .icon{
+    background-color: $secondary;
+  }
+
+  .line{
+    transition: background-color .3s;
+    background-color: $secondary;
+  }
+
+  .profile-picture{
+    border: solid 10px rgba(black, 0.2);
+    background-color: transparent;
+    transition: border-color .3s;
+  }
+
+  .project-details{
+    transition: background-color .3s, transform .3s, border .3s;
+    box-shadow: 0 0 0 black;
+    border-color: $dark-bg;
+    background-color: lighten($dark-bg, 10%);
+    .project-header{
+      background-color: lighten($dark-bg, 6%); 
+      border-color: lighten($dark-bg, 6%); 
+    }
+  }
+
+  .project-details:hover{
+    box-shadow: 0 0 0 black;
+  }
+
+  .blog-details{
+    transition: background-color .3s, transform .3s, border .3s;
+    box-shadow: 0 0 0 black;
+    border-color: $dark-bg;
+    background-color: lighten($dark-bg, 10%);
+    .blog-header{
+      background-color: lighten($dark-bg, 6%);
+      border-color: lighten($dark-bg, 6%); 
+    }
+  }
+
+  .blog-details:hover{
+    box-shadow: 0 0 0 black;
+  }
+}
+
+
+
+// Windows Dots
+.window-dot{
+  width: 12px;
+  height: 12px;
+  background-color: rgb(165, 165, 165);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-1-container{
+  padding-right: 2px;
+}
+
+.dot-2-container{
+  padding-left: 2px;
+}
+
+.dot-1{
+  background-color: rgb(165, 165, 165);
+}
+
+.dot-2{
+  background-color: $primaryColor;
+}
+
+
+
+// Links
+.blog-link, .project-link{
+  text-decoration: none;
+  color: unset;
+  outline: none;
+}
+
+.blog-link:hover, .project-link:hover{
+  text-decoration: none;
+  color: unset;
 }

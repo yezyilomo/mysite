@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+
+.blog-details{
+    word-spacing: 5px;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgb(243, 243, 243);
+    cursor: pointer;
+    background-color: #fcfcfc;
+    transition: background-color .3s, transform .3s, border .3s, box-shadow .3s;
+    border: solid 1px #ebebeb;
+    transform: translateY(0);
+  }
+  
+  .blog-header{
+    transition: all .3s;
+  }
+  
+  .blog-details:hover {
+    box-shadow: 15px 15px 15px rgb(231, 231, 231);
+    transform: translateY(-5px);
+  }
+  
+  .blog-details:hover .blog-header {
+    color: $primaryColor;
+  }
+  
+  .blog-header{
+    background-color: #eeeeee;
+    font-size: 1.3em;
+    font-weight: 500;
+    padding: 5px 5px;
+    border-bottom: solid 1px #e2e2e2;
+  }
