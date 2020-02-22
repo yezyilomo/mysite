@@ -12,32 +12,49 @@ a:hover{
   color: darken($primaryColor, 10%);
 }
 
+.line{
+  transition: background-color .3s;
+}
+
 
 
 .app-light{
   color: $secondary;
   background-color: white;
+  transition: background-color .3s;
   .side-bar{
     background-color: white;
+    transition: background-color .3s, box-shadow .4s;
   }
 }
 
 .app-dark{
   color: white;
   background-color: $dark-bg;
+  transition: background-color .3s;
   .side-bar{
+    transition: background-color .3s, box-shadow 0s;
     box-shadow: 0 0 0 $secondary;
     background-color: lighten($dark-bg, 4%);
   }
+
   .icon{
     background-color: $secondary;
   }
 
   .line{
+    transition: background-color .3s;
     background-color: $secondary;
   }
 
+  .profile-picture{
+    border: solid 10px rgba(black, 0.2);
+    background-color: transparent;
+    transition: border-color .3s;
+  }
+
   .project-details{
+    transition: background-color .3s, transform .3s, border .3s;
     box-shadow: 0 0 0 black;
     border-color: $dark-bg;
     background-color: lighten($dark-bg, 10%);
@@ -52,6 +69,7 @@ a:hover{
   }
 
   .blog-details{
+    transition: background-color .3s, transform .3s, border .3s;
     box-shadow: 0 0 0 black;
     border-color: $dark-bg;
     background-color: lighten($dark-bg, 10%);
@@ -97,8 +115,8 @@ a:hover{
   max-height: 240px;
   max-width: 240px;
   margin: 0 auto 0 auto;
-  border: solid 8px rgb(211, 211, 211);
-  background-color: rgb(211, 211, 211);
+  border: solid 10px rgba(black, 0.1);
+  background-color: transparent;
 }
 
 .profile-picture img{
@@ -228,7 +246,7 @@ a:hover{
   box-shadow: 10px 10px 10px rgb(243, 243, 243);
   cursor: pointer;
   background-color: #fcfcfc;
-  transition: background-color .3s, transform .3s;
+  transition: background-color .3s, transform .3s, border .3s, box-shadow .3s;
   border: solid 1px #ebebeb;
   transform: translateY(0);
 }
@@ -283,7 +301,7 @@ a:hover{
   box-shadow: 10px 10px 10px rgb(243, 243, 243);
   cursor: pointer;
   background-color: #fcfcfc;
-  transition: background-color .3s, transform .3s;
+  transition: background-color .3s, transform .3s, border .3s, box-shadow .3s;
   border: solid 1px #ebebeb;
   transform: translateY(0);
 }

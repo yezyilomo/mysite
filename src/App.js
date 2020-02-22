@@ -252,7 +252,7 @@ function Projects(props){
                 </div>
             )}
             <div class="col-12 p-0 m-0 mt-3">
-                <a href="https://github.com/yezyilomo" class=" mx-3 h5">View all projects</a>
+                <a href="https://github.com/yezyilomo" class=" mx-2 mx-sm-3 h5">View all projects</a>
             </div>
             </div>
         </div>
