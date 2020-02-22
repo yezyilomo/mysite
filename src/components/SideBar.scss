@@ -1,6 +1,28 @@
 @import '../variables.scss';
 
 
+/* Start style sidebar scrollbar */
+$scrollbarBG: transparent;
+$thumbBG: transparent;
+
+.side-bar::-webkit-scrollbar {
+  width: 10px;
+}
+.side-bar {
+  scrollbar-width: thin;
+  scrollbar-color: $thumbBG $scrollbarBG;
+}
+.side-bar::-webkit-scrollbar-track {
+  background: $scrollbarBG;
+}
+.side-bar::-webkit-scrollbar-thumb {
+  background-color: $thumbBG;
+  border-radius: 6px;
+  border: 3px solid $scrollbarBG;
+}
+/* End style sidebar scrollbar */
+
+
 .side-bar{
     height: 100vh;
     top: 0;
@@ -8,6 +30,7 @@
     font-size: 20px;
     font-weight: 400;
     background-color: inherit;
+    overflow-y: auto;
   }
   
   .profile-picture{
