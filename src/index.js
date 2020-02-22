@@ -4,7 +4,7 @@ import { HashRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 import './icons.scss';
-import App from './App';
+import App from './components';
 import * as serviceWorker from './serviceWorker';
 
 function Application(props){

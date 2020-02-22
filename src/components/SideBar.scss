@@ -1,0 +1,55 @@
+@import '../variables.scss';
+
+
+.side-bar{
+    height: 100vh;
+    top: 0;
+    box-shadow: 0 0 20px rgb(228, 228, 228);
+    font-size: 20px;
+    font-weight: 400;
+    background-color: inherit;
+  }
+  
+  .profile-picture{
+    overflow: hidden;
+    border-radius: 50%;
+    max-height: 240px;
+    max-width: 240px;
+    margin: 0 auto 0 auto;
+    border: solid 10px rgba(black, 0.1);
+    background-color: transparent;
+  }
+  
+  .profile-picture img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav-links{
+    list-style: none;
+  }
+  
+  .nav-links li a{
+    outline: none;
+    display: block;
+    padding: 10px 1px 10px 1px;
+  }
+  
+  .social-media{
+    list-style: none;
+    text-align: center;
+  }
+  
+  .social-media li{
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .social-media li .icon{
+    transition: all .1s;
+  }
+  
+  .social-media li .icon:hover{
+    background-color: $primaryColor;
+  }
+  
