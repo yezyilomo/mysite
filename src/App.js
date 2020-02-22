@@ -138,7 +138,7 @@ function App() {
             <div class="nav-toggle d-lg-none">
                 <span class="icon icon-menu" onClick={toggleMenu} />
             </div>
-            <SideBar hideSideBar={hideSideBar} setting={`side-bar fixed-top col-12 col-lg-3 ${getDisplay()}`}/>
+            <SideBar hideSideBar={hideSideBar} setting={`side-bar fixed-top col-10 col-lg-3 ${getDisplay()}`}/>
             <div class="col-3 d-none d-lg-block"></div>
             <div class="contents col-12 col-lg-9 p-0 m-0" onClick={e=>setDisplay(false)}>
                 <Route path="/" exact>
