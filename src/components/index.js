@@ -6,8 +6,10 @@ import {Projects} from './Projects';
 import {Blogs} from './Blogs';
 import {Contact} from './Contact';
 import {ToggleLightButton} from './ToggleLightButton';
+import {SkillsAndTools} from './SkillsAndTools';
 
 export default App;
 export {
-    SideBar, Home, About, Projects, Blogs, Contact, ToggleLightButton
+    SideBar, Home, About, Projects, Blogs, Contact, ToggleLightButton,
+    SkillsAndTools
 }

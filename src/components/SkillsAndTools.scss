@@ -1,37 +1,57 @@
 @import '../variables.scss';
 
 
-.blogs{
-  min-height: 100vh;
+.skills-and-details {
+    min-height: 100vh;
 }
 
-.blog-details{
-    word-spacing: 5px;
-    height: auto;
+.skill-details {
+    height: 220px;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 10px 10px 10px rgb(243, 243, 243);
-    cursor: pointer;
     background-color: #fcfcfc;
     transition: background-color .3s, transform .3s, border .3s, box-shadow .3s;
     border: solid 1px #ebebeb;
     transform: translateY(0);
-  }
-  
-  .blog-details:hover {
+}
+
+.skill-details:hover {
     box-shadow: 15px 15px 15px rgb(231, 231, 231);
     transform: translateY(-5px);
-  }
-  
-  .blog-details:hover .blog-header {
+}
+
+.skill-details:hover .skill-header {
     color: $primaryColor;
-  }
-  
-  .blog-header{
+}
+
+.skill-header {
     background-color: #eeeeee;
     font-size: 1.3em;
     font-weight: 500;
     padding: 5px 5px;
     border-bottom: solid 1px #e2e2e2;
     transition: all .3s;
-  }
+}
+
+.skill-header .icon-code {
+    position: relative;
+    top: 4px;
+}
+
+.skill-details .tools ul {
+    list-style: none;
+}
+
+.skill-details .tools li {
+    margin-bottom: 10px;
+}
+
+.skill-details .tools li .icon {
+    float: left;
+    position: relative;
+    bottom: 2px;
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+}

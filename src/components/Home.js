@@ -17,11 +17,12 @@ function Home(props){
                 Yezileli Ilomo
             </div>
             <div class="row quotes mt-4">
-                <div class="col-12 col-lg-6 mt-3">
-                “A language that doesn't affect the way you think about programming is not worth knowing.” 
+                <h2 class="quotes-header col-12">My Favourite Quotes</h2>
+                <div class="quote col-12 col-lg-6 mt-3">
+                “A language that doesn't affect the way you think about programming is not worth knowing.” &nbsp;&nbsp;– Alan J. Perlis
                 </div>
-                <div class="col-12 col-lg-6 mt-3">
-                “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” 
+                <div class="quote col-12 col-lg-6 mt-3">
+                “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” &nbsp;&nbsp;– Martin Fowler
                 </div>
             </div>
         </div>

@@ -69,6 +69,21 @@ a:hover{
     transition: border-color .3s;
   }
 
+  .skill-details{
+    transition: background-color .3s, transform .3s, border .3s;
+    box-shadow: 0 0 0 black;
+    border-color: $dark-bg;
+    background-color: lighten($dark-bg, 10%);
+    .skill-header{
+      background-color: lighten($dark-bg, 6%); 
+      border-color: lighten($dark-bg, 6%); 
+    }
+  }
+
+  .skill-details:hover{
+    box-shadow: 0 0 0 black;
+  }
+
   .project-details{
     transition: background-color .3s, transform .3s, border .3s;
     box-shadow: 0 0 0 black;

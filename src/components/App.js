@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import {Route} from 'react-router';
-import {SideBar, Home, About, Projects, Blogs, Contact} from '.';
+import {SideBar, Home, About, Projects, Blogs, Contact, SkillsAndTools} from '.';
 import './App.scss';
 
 
@@ -31,6 +30,7 @@ function App() {
             <div class="contents col-12 col-lg-9 p-0 m-0" onClick={e=>setDisplay(false)}>
                 <Home/>
                 <About/>
+                <SkillsAndTools/>
                 <Projects/>
                 <Blogs/>
                 <Contact/>
