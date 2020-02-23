@@ -5,12 +5,13 @@ import './SideBar.scss';
 
 function SideBar(props) {
     function scrollToElement(e){
-        e.preventDefault()
+        e.preventDefault();
         props.hideSideBar();
         let id = e.target.getAttribute('href');
         document.querySelector(id).scrollIntoView({ 
             behavior: 'smooth' 
-          });
+        });
+        window.history.pushState(null, e.target.innerHTML, id);
     }
     return (
         <div class={`${props.setting}`}>
