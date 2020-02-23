@@ -38,7 +38,7 @@ function Blogs(props){
     ]
 
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 blogs">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 blogs" id="blogs">
             <h1 class="section-title">My Blogs</h1>
             <div class="row p-0 m-0 mt-2 mt-lg-5">
             {blogs.map(blog =>

@@ -9,7 +9,7 @@ function Home(props){
         "font-family": `'${randomFont}', cursive`
     }
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 home">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 home" id="home">
             <div class="col-12 name text-center" style={fontStyle}>
                 <div class="profile-picture ">
                     <img src="images/yezy.jpg" alt="Picture" />
