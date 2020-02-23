@@ -26,6 +26,8 @@ function SideBar(props) {
                     <hr class="line p-0 m-0" />
                     <li><a href="#about" onClick={scrollToElement}>About</a></li>
                     <hr class="line p-0 m-0" />
+                    <li><a href="#skills-and-tools" onClick={scrollToElement}>Skills & Tools</a></li>
+                    <hr class="line p-0 m-0" />
                     <li><a href="#projects" onClick={scrollToElement}>Projects</a></li>
                     <hr class="line p-0 m-0" />
                     <li><a href="#blogs" onClick={scrollToElement}>Blogs</a></li>
@@ -35,7 +37,7 @@ function SideBar(props) {
                 </ul>
             </div>
 
-            <div class="col-12 mt-5">
+            <div class="col-12 mt-4">
                 <ul class="row social-media m-0 p-0 pt-2">
                     <li class="col p-0 m-0"><a href="https://github.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-github"/></a></li>
                     <li class="col p-0 m-0"><a href="https://twitter.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-twitter"/></a></li>

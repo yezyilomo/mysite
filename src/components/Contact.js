@@ -9,7 +9,7 @@ function Contact(props){
 
             <div class="row p-0 m-0 mt-2 mt-lg-5">
                 <div class="col-12 col-lg-6 p-0 m-0">
-                    <div class="row m-0 p-0 mt-4">
+                    <div class="row m-0 p-0">
                         <div class="col-1 label-icon"><span class="icon icon-location"/></div>
                         <div class="col-3 label">Location:</div>
                         <div class="col">Dar es salaam, Tanzania</div>
