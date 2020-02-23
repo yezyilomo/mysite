@@ -1,6 +1,10 @@
 @import '../variables.scss';
 
 
+.home{
+  min-height: 100vh;
+}
+
 .home .name{
     font-size: 5em;
   }

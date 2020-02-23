@@ -1,6 +1,10 @@
 @import '../variables.scss';
 
 
+.projects{
+  min-height: 100vh;
+}
+
 .project-details{
     height: 200px;
     border-radius: 5px;

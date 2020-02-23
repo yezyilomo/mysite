@@ -57,7 +57,7 @@ function Projects(props){
         },
     ]
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 projects">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 projects" id="projects">
             <h1 class="section-title">My Projects</h1>
             <div class="row p-0 m-0 mt-2 mt-lg-5">
             {projects.map(project =>

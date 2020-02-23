@@ -29,21 +29,11 @@ function App() {
             <SideBar hideSideBar={hideSideBar} setting={`side-bar fixed-top col-10 col-lg-3 ${getSideBarDisplayClass()}`}/>
             <div class="col-3 d-none d-lg-block"></div>
             <div class="contents col-12 col-lg-9 p-0 m-0" onClick={e=>setDisplay(false)}>
-                <Route path="/" exact>
-                    <Home/>
-                </Route>
-                <Route path="/about" exact>
-                    <About/>
-                </Route>
-                <Route path="/projects" exact>
-                    <Projects/>
-                </Route>
-                <Route path="/blogs" exact>
-                    <Blogs/>
-                </Route>
-                <Route path="/contact" exact>
-                    <Contact/>
-                </Route>
+                <Home/>
+                <About/>
+                <Projects/>
+                <Blogs/>
+                <Contact/>
             </div>
         </div>
     );

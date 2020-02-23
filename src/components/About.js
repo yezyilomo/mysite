@@ -15,7 +15,7 @@ function About(props){
     }
 
     return (
-        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about">
+        <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about" id="about">
             <h1 class="section-title">About Me</h1>
             <h5 class="mt-2 mt-lg-5">Hi! My name is <span class="my-name">Yezileli Ilomo</span>.</h5>
             <p class="mt-2">

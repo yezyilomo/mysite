@@ -1,10 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {ToggleLightButton} from '.';
 import './SideBar.scss';
 
 
 function SideBar(props) {
+    function scrollToElement(e){
+        e.preventDefault()
+        props.hideSideBar();
+        let id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+    }
     return (
         <div class={`${props.setting}`}>
             <ToggleLightButton/>
@@ -15,26 +22,26 @@ function SideBar(props) {
             </div>
             <div class="col-12 mt-4">
                 <ul class="nav-links m-0 p-0">
-                    <li><Link to="/" onClick={props.hideSideBar}>Home</Link></li>
+                    <li><a href="#home" onClick={scrollToElement}>Home</a></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/about" onClick={props.hideSideBar}>About</Link></li>
+                    <li><a href="#about" onClick={scrollToElement}>About</a></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/projects" onClick={props.hideSideBar}>Projects</Link></li>
+                    <li><a href="#projects" onClick={scrollToElement}>Projects</a></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/blogs" onClick={props.hideSideBar}>Blogs</Link></li>
+                    <li><a href="#blogs" onClick={scrollToElement}>Blogs</a></li>
                     <hr class="line p-0 m-0" />
-                    <li><Link to="/contact" onClick={props.hideSideBar}>Contact</Link></li>
+                    <li><a href="#contact" onClick={scrollToElement}>Contact</a></li>
                     <hr class="line p-0 m-0" />
                 </ul>
             </div>
 
             <div class="col-12 mt-5">
-                <ul class="social-media m-0 p-0 pt-2">
-                    <li><a href="https://github.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-github"/></a></li>
-                    <li><a href="https://twitter.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-twitter"/></a></li>
-                    <li><a href="https://www.linkedin.com/in/yezileli-ilomo-57b76b140/" target="_blank" rel="noopener noreferrer"><span class="icon icon-linkedin"/></a></li>
-                    <li><a href="https://instagram.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-instagram"/></a></li>
-                    <li><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail-bold"/></a></li>
+                <ul class="row social-media m-0 p-0 pt-2">
+                    <li class="col p-0 m-0"><a href="https://github.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-github"/></a></li>
+                    <li class="col p-0 m-0"><a href="https://twitter.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-twitter"/></a></li>
+                    <li class="col p-0 m-0"><a href="https://www.linkedin.com/in/yezileli-ilomo-57b76b140/" target="_blank" rel="noopener noreferrer"><span class="icon icon-linkedin"/></a></li>
+                    <li class="col p-0 m-0"><a href="https://instagram.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-instagram"/></a></li>
+                    <li class="col p-0 m-0"><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail-bold"/></a></li>
                 </ul>
             </div>
         </div>
