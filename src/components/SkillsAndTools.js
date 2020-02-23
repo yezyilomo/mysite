@@ -45,7 +45,7 @@ function SkillsAndTools(props) {
             "PostgreSQL", 
             "MySQL"
         ] },
-        { title: "Development Tools", tools: [
+        { title: "Dev Tools", tools: [
             "Bash",
             "Git", 
             "GitHub", 
@@ -68,7 +68,7 @@ function SkillsAndTools(props) {
 
             <div class="row p-0 m-0 mt-2 mt-lg-5">
                 {skills.map(skill =>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 m-0 p-0 my-3 px-1 px-sm-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 m-0 p-0 my-3 px-1 px-sm-3">
                         <SkillDetails skill={skill} />
                     </div>
                 )}
