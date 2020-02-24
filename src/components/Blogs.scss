@@ -7,7 +7,7 @@
 
 .blog-details{
     word-spacing: 5px;
-    height: auto;
+    height: 100%;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 10px 10px 10px rgb(243, 243, 243);
@@ -35,3 +35,7 @@
     border-bottom: solid 1px #e2e2e2;
     transition: all .3s;
   }
+
+  .blog-details .blog-body{
+    padding: .5rem .5rem 1rem .5rem;
+}

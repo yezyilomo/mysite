@@ -15,7 +15,7 @@ function BlogDetails(props){
                         <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
                     </div>
                 </div>
-                <div class="col-12 m-0 p-2 pb-4">
+                <div class="col-12 m-0 blog-body">
                     {props.blog.description}
                 </div>
             </div>
