@@ -15,7 +15,7 @@ function ProjectDetails(props){
                         <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
                     </div>
                 </div>
-                <div class="col-12 m-0 p-2">
+                <div class="col-12 m-0 project-body">
                     {props.project.description}
                 </div>
             </div>
