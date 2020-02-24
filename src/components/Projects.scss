@@ -3,6 +3,7 @@
 
 .projects{
   min-height: 100vh;
+  background-color: transparentize($color: #000000, $amount: 0.985);
 }
 
 .project-details{
