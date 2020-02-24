@@ -14,10 +14,10 @@ function SkillDetails(props) {
                     <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
                 </div>
             </div>
-            <div class="col-12 m-0 p-2 tools">
+            <div class="col-12 m-0 skill-body">
                 <ul class="p-0 m-0">
                     {props.skill.tools.map(tool =>
-                        <li>- {tool} </li>
+                        <li># {tool} </li>
                     )}
                 </ul>
             </div>
@@ -57,9 +57,10 @@ function SkillsAndTools(props) {
             "Apache"
         ] },
         { title: "Other Skills", tools: [
-            "Making Documentations", 
+            "Documenting stuffs", 
             "Test Driven Development(TDD)", 
-            "API Design & Development"
+            "API Design & Development",
+            "Odoo ERP"
         ] }
     ]
     return (
