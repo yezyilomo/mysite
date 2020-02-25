@@ -17,7 +17,7 @@ function About(props){
     return (
         <div class="col-12 px-3 px-lg-5 pt-4 pb-4 about" id="about">
             <h1 class="section-title">About Me</h1>
-            <h5 class="mt-2 mt-lg-5">Hi! My name is <span class="my-name">Yezileli Ilomo</span>.</h5>
+            <h5 class="mt-4 mt-lg-5">Hi! My name is <span class="my-name">Yezileli Ilomo</span>.</h5>
             <p class="mt-2">
             I am software engineer with a demonstrated history of working 
             in the information technology and services industry. I graduated at the University of 
@@ -37,7 +37,7 @@ function About(props){
                         <div class="col">Dar es salaam, Tanzania</div>
                     </div>
                     <div class="row m-0 p-0 mt-4">
-                        <div class="col-1 label-icon"><span class="icon icon-book"/></div>
+                        <div class="col-1 label-icon"><span class="icon icon-student"/></div>
                         <div class="col-3 label">Study:</div>
                         <div class="col">University Of Dar es salaam</div>
                     </div>

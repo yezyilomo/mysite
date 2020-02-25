@@ -17,6 +17,7 @@ function BlogDetails(props){
                 </div>
                 <div class="col-12 m-0 blog-body">
                     {props.blog.description}
+                    <a href={props.blog.url} target="_blank" rel="noopener noreferrer"> Read more</a>
                 </div>
             </div>
         </a>

@@ -44,7 +44,7 @@ function SideBar(props) {
                     <li class="col p-0 m-0"><a href="https://twitter.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-twitter"/></a></li>
                     <li class="col p-0 m-0"><a href="https://www.linkedin.com/in/yezileli-ilomo-57b76b140/" target="_blank" rel="noopener noreferrer"><span class="icon icon-linkedin"/></a></li>
                     <li class="col p-0 m-0"><a href="https://instagram.com/yezyilomo" target="_blank" rel="noopener noreferrer"><span class="icon icon-instagram"/></a></li>
-                    <li class="col p-0 m-0"><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail-bold"/></a></li>
+                    <li class="col p-0 m-0"><a href="mailto:yezileliilomo@hotmail.com"><span class="icon icon-mail"/></a></li>
                 </ul>
             </div>
         </div>
