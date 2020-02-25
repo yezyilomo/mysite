@@ -17,6 +17,7 @@ function ProjectDetails(props){
                 </div>
                 <div class="col-12 m-0 project-body">
                     {props.project.description}
+                    <a href={props.project.url} target="_blank" rel="noopener noreferrer"> See more</a>
                 </div>
             </div>
         </a>
@@ -32,7 +33,7 @@ function Projects(props){
         },
         {
             title: "GitHub Deployer", 
-            description: "This is a tool for automating Deployments from GitHub to any server using GitHub's Webhooks with simple configurations.", 
+            description: "This is a tool for automating Deployments from GitHub to any server using GitHub Webhooks API with simple configuration.", 
             url: "https://github.com/yezyilomo/github-auto-deployer"
         },
         {
