@@ -2,7 +2,6 @@
 
 
 .about{
-    word-spacing: 5px;
     font-size: 1.1em;
     min-height: 100vh;
     background-color: transparentize($color: #000000, $amount: 0.985);
@@ -14,7 +13,6 @@
   
   .about .label-icon span{
     background-color: $primaryColor;
-    margin-top: 3px;
   }
   
   .about .label{

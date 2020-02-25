@@ -7,7 +7,7 @@ function Contact(props){
         <div class="col-12 px-3 px-lg-5 pt-4 pb-4 contact" id="contact">
             <h1 class="section-title">Get in Touch</h1>
 
-            <div class="row p-0 m-0 mt-2 mt-lg-5">
+            <div class="row p-0 m-0 mt-4 mt-lg-5">
                 <div class="col-12 col-lg-6 p-0 m-0">
                     <div class="row m-0 p-0">
                         <div class="col-1 label-icon"><span class="icon icon-location"/></div>
