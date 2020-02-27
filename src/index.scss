@@ -45,7 +45,7 @@ a:hover{
 
 // Dark Theme
 .app-dark{
-  color: white;
+  color: $light;
   background-color: $dark-bg;
   transition: background-color .3s;
   .side-bar{
