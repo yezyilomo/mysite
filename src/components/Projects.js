@@ -43,7 +43,7 @@ function Projects(props){
         },
         {
             title: "State Pool", 
-            description: "React state management library based on global variables and react hooks. With this there no need for Provider component or using Contex API at all, it works like react state hooks.", 
+            description: "React state management library based on global variables and react hooks. With this there's no need for Provider component or using Contex API at all, it works like react state hooks.", 
             url: "https://github.com/yezyilomo/state-pool"
         },
         {
