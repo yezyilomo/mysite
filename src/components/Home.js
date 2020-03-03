@@ -14,7 +14,7 @@ function Home(props){
                 <div class="profile-picture ">
                     <img src="images/yezy.jpg" alt="Picture" />
                 </div>
-                Yezy Ilomo
+                Yezileli Ilomo
             </div>
             <div class="row quotes mt-4">
                 <h2 class="quotes-header col-12">My Favourite Quotes</h2>
