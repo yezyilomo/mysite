@@ -16,8 +16,8 @@ function ProjectDetails(props){
                     </div>
                 </div>
                 <div class="col-12 m-0 project-body">
-                    {props.project.description}
-                    <a href={props.project.url} target="_blank" rel="noopener noreferrer"> See more</a>
+                    {props.project.description} &nbsp;&nbsp;
+                    <a href={props.project.url} target="_blank" rel="noopener noreferrer">See more →</a>
                 </div>
             </div>
         </a>
