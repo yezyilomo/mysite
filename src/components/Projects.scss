@@ -3,48 +3,5 @@
 
 .projects{
   min-height: 100vh;
-  background-color: transparentize($color: #000000, $amount: 0.985);
-}
-
-.project-details{
-    height: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 10px 10px 10px rgb(243, 243, 243);
-    cursor: pointer;
-    background-color: #fcfcfc;
-    transition: background-color .3s, transform .3s, border .3s, box-shadow .3s;
-    border: solid 1px #ebebeb;
-    transform: translateY(0);
-  }
-  
-  .project-details:hover {
-    box-shadow: 15px 15px 15px rgb(231, 231, 231);
-    transform: translateY(-5px);
-  }
-  
-  .project-details:hover .project-header {
-    color: $primaryColor;
-  }
-  
-  .project-header{
-    background-color: #eeeeee;
-    font-size: 1.3em;
-    font-weight: 500;
-    padding: 5px 5px;
-    border-bottom: solid 1px #e2e2e2;
-    transition: all .3s;
-  }
-  
-  .project-header .icon-github{
-    position: relative;
-    top: 4px;
-  }
-
-  .project-details .project-body{
-    padding: .5rem .5rem 1rem .5rem;
-}
-
-.project-details a{
-  display: inline-block;
+  background-color: $page-color;
 }

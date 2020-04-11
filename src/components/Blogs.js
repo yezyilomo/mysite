@@ -4,9 +4,9 @@ import './Blogs.scss';
 
 function BlogDetails(props){
     return (
-        <a href={props.blog.url} class="blog-link" target="_blank" rel="noopener noreferrer">
-            <div class="col-12 m-0 p-0 blog-details">
-                <div class="row col-12 m-0 blog-header">
+        <a href={props.blog.url} class="window-as-link" target="_blank" rel="noopener noreferrer">
+            <div class="col-12 m-0 p-0 window">
+                <div class="row col-12 m-0 window-header">
                     <div class="col-10 p-0 m-0">
                         <span class="icon icon-quill"/> {props.blog.title}
                     </div>
@@ -15,7 +15,7 @@ function BlogDetails(props){
                         <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
                     </div>
                 </div>
-                <div class="col-12 m-0 blog-body">
+                <div class="col-12 m-0 window-body">
                     {props.blog.description} &nbsp;&nbsp;
                     <a href={props.blog.url} target="_blank" rel="noopener noreferrer"> Read more →</a>
                 </div>

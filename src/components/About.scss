@@ -4,7 +4,7 @@
 .about{
     font-size: 1.1em;
     min-height: 100vh;
-    background-color: transparentize($color: #000000, $amount: 0.985);
+    background-color: $page-color;
   }
   
   .about .my-name{

@@ -69,53 +69,72 @@ a:hover{
     transition: border-color .3s;
   }
 
-  .skill-details{
-    transition: background-color .3s, transform .3s, border .3s;
+  .window{
+    transition: transform .3s, border .3s;
     box-shadow: 0 0 0 black;
     border-color: $dark-bg;
-    background-color: lighten($dark-bg, 10%);
-    .skill-header{
+    .window-header{
       background-color: lighten($dark-bg, 6%); 
       border-color: lighten($dark-bg, 6%); 
     }
-  }
-
-  .skill-details:hover{
-    box-shadow: 0 0 0 black;
-  }
-
-  .project-details{
-    transition: background-color .3s, transform .3s, border .3s;
-    box-shadow: 0 0 0 black;
-    border-color: $dark-bg;
-    background-color: lighten($dark-bg, 10%);
-    .project-header{
-      background-color: lighten($dark-bg, 6%); 
-      border-color: lighten($dark-bg, 6%); 
+    .window-body{
+      transition: background-color .3s;
+      background-color: lighten($dark-bg, 10%);
     }
   }
 
-  .project-details:hover{
-    box-shadow: 0 0 0 black;
-  }
-
-  .blog-details{
-    transition: background-color .3s, transform .3s, border .3s;
-    box-shadow: 0 0 0 black;
-    border-color: $dark-bg;
-    background-color: lighten($dark-bg, 10%);
-    .blog-header{
-      background-color: lighten($dark-bg, 6%);
-      border-color: lighten($dark-bg, 6%); 
-    }
-  }
-
-  .blog-details:hover{
+  .window:hover{
     box-shadow: 0 0 0 black;
   }
 }
 
 
+// Window
+$window-header-bg: #eeeeee;
+.window{
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgb(243, 243, 243);
+  transition: transform .3s, border .3s, box-shadow .3s;
+  border: solid 1px $window-header-bg;
+  transform: translateY(0);
+}
+
+.window:hover {
+  box-shadow: 15px 15px 15px rgb(231, 231, 231);
+  transform: translateY(-5px);
+}
+
+.window-header{
+  background-color: $window-header-bg;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 5px 5px;
+  border-bottom: solid 1px darken($window-header-bg, 5%);
+  transition: all .3s;
+}
+
+.window:hover .window-header {
+  color: $primaryColor;
+}
+
+.window-header .icon{
+  position: relative;
+  top: 4px;
+}
+
+.window-body{
+  background-color: lighten($window-header-bg, 5.5%);
+  transition: background-color .3s;
+  height: 100%;
+  padding: .5rem .5rem 1rem .5rem;
+}
+
+.window-body a{
+  // Style See all link
+  display: inline-block;
+}
 
 // Windows Dots
 .window-dot{
@@ -141,6 +160,19 @@ a:hover{
 .dot-2{
   background-color: $primaryColor;
 }
+
+// Links
+.window-as-link{
+  text-decoration: none;
+  color: unset;
+  outline: none;
+}
+
+.window-as-link:hover{
+  text-decoration: none;
+  color: unset;
+}
+
 
 
 

@@ -4,8 +4,8 @@ import './SkillsAndTools.scss';
 
 function SkillDetails(props) {
     return (
-        <div class="col-12 m-0 p-0 skill-details">
-            <div class="row col-12 m-0 skill-header">
+        <div class="col-12 m-0 p-0 window">
+            <div class="row col-12 m-0 window-header">
                 <div class="col-10 p-0 m-0">
                     <span class="icon icon-code"/>  {props.skill.title}
                 </div>
@@ -14,7 +14,7 @@ function SkillDetails(props) {
                     <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
                 </div>
             </div>
-            <div class="col-12 m-0 skill-body">
+            <div class="col-12 m-0 window-body">
                 <ul class="p-0 m-0">
                     {props.skill.tools.map(tool =>
                         <li># {tool} </li>
