@@ -18,7 +18,9 @@ function SideBar(props) {
             <ToggleLightButton/>
             <div class="col-12 text-center">
                 <div class="profile-picture mt-4">
-                    <img src="images/yezy.jpg" alt="Picture" />
+                    <span class="lazy-container">
+                        <img src="images/yezy.jpg" />
+                    </span>
                 </div>
             </div>
             <div class="col-12 mt-4">
