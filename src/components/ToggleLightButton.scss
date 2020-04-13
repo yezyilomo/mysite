@@ -9,7 +9,7 @@
   }
   
   .toggle-light-button .string{
-    height: 23px;
+    height: 20px;
     position: relative;
     left: 24px;
     border-left: solid 2px transparent;
@@ -23,6 +23,22 @@
   .toggle-light-button .string-light-off{
     border-color: $primaryColor;
   }
+
+  .toggle-light-button .holder-light-on{
+    background-color: transparent;
+  }
+  
+  .toggle-light-button .holder-light-off{
+    background-color: $primaryColor;
+  }
+
+  .toggle-light-button .holder{
+    position: relative;
+    left: 21px;
+    transition: background-color .3s;
+    width: 8px;
+    height: 2px;
+  }
   
   .toggle-light-button .icon-idea{
     width: 50px;
@@ -32,7 +48,7 @@
   
   .toggle-light-button .light-on{
     background-color: rgb(75, 75, 75);
-    margin-top: -1px;
+    margin-top: -3px;
   }
   
   .toggle-light-button .light-off{
