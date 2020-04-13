@@ -71,6 +71,7 @@ function ToggleLightButton(props) {
     return (
         <div class="toggle-light-button" onClick={handleButtonToggle}>
             <div class={`string string-${themeStates.get(theme).bulbClassName}`}/>
+            <div class={`holder holder-${themeStates.get(theme).bulbClassName}`}/>
             <span class={`icon icon-idea ${themeStates.get(theme).bulbClassName}`}/>
         </div>
     );
