@@ -1,0 +1,12 @@
+.scroll-up .icon-up-arrow {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.scroll-up:active {
+    color: gray;
+}

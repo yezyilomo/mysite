@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import {SideBar, Home, About, Projects, Blogs, Contact, SkillsAndTools} from '.';
+import {
+    SideBar, Home, About, Projects, Blogs, Contact,
+    SkillsAndTools, TopScroller
+} from '.';
 import './App.scss';
 
 
@@ -35,6 +38,7 @@ function App() {
                 <Blogs/>
                 <Contact/>
             </div>
+            <TopScroller />
         </div>
     );
 }

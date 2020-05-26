@@ -1,8 +1,10 @@
-// Required
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+// Inherit bootstrap functions, variables & mixins
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
 
-$primaryColor: rgb(0, 132, 137);
-$dark-bg: #15202b;
-$page-color: transparentize($color: #000000, $amount: 0.985);
+// Override bootstrap color variables
+@import "theme.scss";
+
+$dark-bg-color: #15202b;
+$page-bg-color: transparentize($color: #000000, $amount: 0.985);

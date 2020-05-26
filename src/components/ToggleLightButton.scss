@@ -21,7 +21,7 @@
   }
   
   .toggle-light-button .string-light-off{
-    border-color: $primaryColor;
+    border-color: $primary;
   }
 
   .toggle-light-button .holder-light-on{
@@ -29,7 +29,7 @@
   }
   
   .toggle-light-button .holder-light-off{
-    background-color: $primaryColor;
+    background-color: $primary;
   }
 
   .toggle-light-button .holder{
@@ -52,6 +52,6 @@
   }
   
   .toggle-light-button .light-off{
-    background-color: $primaryColor;
+    background-color: $primary;
     margin-top: 7px;
   }
