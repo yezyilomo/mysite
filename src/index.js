@@ -1,11 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './custom.scss';
 import './index.scss';
 import './icons.scss';
 import App from './components';
 import * as serviceWorker from './serviceWorker';
+
+
+window.onScrollActions = {};
+
+window.onscroll = () => {
+    for (let action in window.onScrollActions) {
+        window.onScrollActions[action]();
+    }
+};
+
 
 function Application(props){
     return (

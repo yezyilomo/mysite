@@ -4,15 +4,15 @@
 .about{
     font-size: 1.1em;
     min-height: 100vh;
-    background-color: $page-color;
+    background-color:  $page-bg-color;
   }
   
   .about .my-name{
-    color: $primaryColor;
+    color: $primary;
   }
   
   .about .label-icon span{
-    background-color: $primaryColor;
+    background-color: $primary;
   }
   
   .about .label{
@@ -22,7 +22,5 @@
   .about .button{
     font-size: 1.1em;
     font-weight: 300;
-    background-color: $primaryColor;
-    border-width: 0;
   }
   
