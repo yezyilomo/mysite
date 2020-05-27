@@ -27,6 +27,11 @@ function BlogDetails(props){
 function Blogs(props){
     let blogs = [
         {
+            title: "Global state management in React with global variables and hooks.", 
+            description: "The concept of managing states comes from the concept of variables which is very basic in all programming languages. In managing state we have local and global states which corresponds to local and global variables in the concept of variables. In both concepts the aim of global(state & variable) is to be able to share it among entities which might be functions ...",
+            url: "https://dev.to/yezyilomo/global-state-management-in-react-with-global-variables-and-hooks-state-management-doesn-t-have-to-be-so-hard-2n2c"
+        },
+        {
             title: "Introducing a Simple React State Manager Based on Hooks.", 
             description: "Redux is a popular state manager in React but despite its popularity it has many problems, the most obvious ones being -Learning curve: Many developers found themselves lost in the Redux world of strange terms, weird entities and the connection between them: thunk, selectors, reducers, actions, middlewares, mapStateToProps, mapDispatchToProps, etc. Learning all this ...",
             url: "https://dev.to/yezyilomo/introducing-a-simple-react-state-manager-based-on-hooks-4bc0"
