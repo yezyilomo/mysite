@@ -32,14 +32,14 @@ function Projects(props){
             url: "https://github.com/yezyilomo/django-restql"
         },
         {
+            title: "Settle", 
+            description: "Real Estate Progressive Web App(PWA) written with React + Django. The API is powered by Django REST framework + Django RESTQL.", 
+            url: "https://settle.yezyilomo.com/"
+        },
+        {
             title: "GitHub Deployer", 
             description: "This is a tool for automating Deployments from GitHub to any server using GitHub Webhooks API with simple configuration.", 
             url: "https://github.com/yezyilomo/github-auto-deployer"
-        },
-        {
-            title: "Dictfier", 
-            description: "Python library to convert/serialize class instances(Objects) both flat and nested into a dictionary data structure. It's very useful in converting Python Objects into JSON format.", 
-            url: "https://github.com/yezyilomo/dictfier"
         },
         {
             title: "State Pool", 
@@ -48,13 +48,13 @@ function Projects(props){
         },
         {
             title: "Odoo REST API", 
-            description: "This is a module which expose Odoo ERP as a REST API, You can use this API to integrate Odoo ERP with external services.", 
+            description: "This is a module which expose Odoo ERP as a REST API with some features of GraphQL, You can use this API to integrate Odoo ERP with external services.", 
             url: "https://github.com/yezyilomo/odoo-rest-api"
         },
         {
-            title: "Settle", 
-            description: "Real Estate Progressive Web App(PWA) written with React + Django. The API is powered by Django REST framework + Django RESTQL.", 
-            url: "https://settle.yezyilomo.com/"
+            title: "Dictfier", 
+            description: "Python library to convert/serialize class instances(Objects) both flat and nested into a dictionary data structure. It's very useful in converting Python Objects into JSON format.", 
+            url: "https://github.com/yezyilomo/dictfier"
         },
     ]
     return (
