@@ -34,7 +34,7 @@ function Projects(props){
         {
             title: "Settle", 
             description: "Real Estate Progressive Web App(PWA) written with React + Django. The API is powered by Django REST framework + Django RESTQL.", 
-            url: "https://settle.yezyilomo.com/"
+            url: "https://settle.yezyilomo.me/"
         },
         {
             title: "GitHub Deployer", 
