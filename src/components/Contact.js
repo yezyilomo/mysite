@@ -52,7 +52,7 @@ function Contact(props){
                     <div class="row m-0 p-0 mt-4">
                         <div class="col-1 label-icon"><span class="icon icon-web"/></div>
                         <div class="col-3 label">Website:</div>
-                        <div class="col"><a href="https://yezyilomo.me">yezyilomo.com</a></div>
+                        <div class="col"><a href="https://yezyilomo.me">yezyilomo.me</a></div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 p-0 m-0">
