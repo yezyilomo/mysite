@@ -2,25 +2,23 @@ import React from 'react';
 import './Projects.scss';
 
 
-function ProjectDetails(props){
+function ProjectDetails(props) {
     return (
-        <a href={props.project.url} class="window-as-link" target="_blank" rel="noopener noreferrer">
-            <div class="col-12 m-0 p-0 window">
-                <div class="row col-12 m-0 window-header">
-                    <div class="col-10 p-0 m-0">
-                        <span class="icon icon-github"/> {props.project.title}
-                    </div>
-                    <div class="col-2 p-0 m-0 text-right">
-                        <span class="dot-1-container"><div class="window-dot dot-1"></div></span>
-                        <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
-                    </div>
+        <div class="col-12 m-0 p-0 window">
+            <div class="row col-12 m-0 window-header">
+                <div class="col-10 p-0 m-0">
+                    <span class="icon icon-github" /> {props.project.title}
                 </div>
-                <div class="col-12 m-0 window-body">
-                    {props.project.description} &nbsp;&nbsp;
-                    <a href={props.project.url} target="_blank" rel="noopener noreferrer">See more →</a>
+                <div class="col-2 p-0 m-0 text-right">
+                    <span class="dot-1-container"><div class="window-dot dot-1"></div></span>
+                    <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
                 </div>
             </div>
-        </a>
+            <div class="col-12 m-0 window-body">
+                {props.project.description} &nbsp;&nbsp;
+                <a href={props.project.url} target="_blank" rel="noopener noreferrer">See more →</a>
+            </div>
+        </div>
     );
 }
 

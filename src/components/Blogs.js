@@ -2,32 +2,35 @@ import React from 'react';
 import './Blogs.scss';
 
 
-function BlogDetails(props){
+function BlogDetails(props) {
     return (
-        <a href={props.blog.url} class="window-as-link" target="_blank" rel="noopener noreferrer">
-            <div class="col-12 m-0 p-0 window">
-                <div class="row col-12 m-0 window-header">
-                    <div class="col-10 p-0 m-0">
-                        <span class="icon icon-quill"/> {props.blog.title}
-                    </div>
-                    <div class="col-2 p-0 m-0 text-right">
-                        <span class="dot-1-container"><div class="window-dot dot-1"></div></span>
-                        <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
-                    </div>
+        <div class="col-12 m-0 p-0 window">
+            <div class="row col-12 m-0 window-header">
+                <div class="col-10 p-0 m-0">
+                    <span class="icon icon-quill" /> {props.blog.title}
                 </div>
-                <div class="col-12 m-0 window-body">
-                    {props.blog.description} &nbsp;&nbsp;
-                    <a href={props.blog.url} target="_blank" rel="noopener noreferrer"> Read more →</a>
+                <div class="col-2 p-0 m-0 text-right">
+                    <span class="dot-1-container"><div class="window-dot dot-1"></div></span>
+                    <span class="dot-2-container"><div class="window-dot dot-2"></div></span>
                 </div>
             </div>
-        </a>
+            <div class="col-12 m-0 window-body">
+                {props.blog.description} &nbsp;&nbsp;
+                <a href={props.blog.url} target="_blank" rel="noopener noreferrer"> Read more →</a>
+            </div>
+        </div>
     );
 }
 
 function Blogs(props){
     let blogs = [
         {
-            title: "React state management with global variables and hooks.", 
+            title: "You Can Use Global Variables To Manage Global State.", 
+            description: "React provides a very good and simple way to manage local states through state hooks but when it comes to global states the options available are overwhelming. React itself provides the context API which many third party libraries for managing global state are built on top of it, but still the APIs built are not as simple and intuitive as state hooks ...",
+            url: "https://dev.to/yezyilomo/you-can-definitely-use-global-variables-to-manage-global-state-in-react-17l3"
+        },
+        {
+            title: "React State Management With Global Variables And Hooks.", 
             description: "The concept of managing states comes from the concept of variables which is very basic in all programming languages. In managing state we have local and global states which corresponds to local and global variables in the concept of variables. In both concepts the aim of global(state & variable) is to be able to share it among entities which might be functions ...",
             url: "https://dev.to/yezyilomo/global-state-management-in-react-with-global-variables-and-hooks-state-management-doesn-t-have-to-be-so-hard-2n2c"
         },

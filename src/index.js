@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import smoothscroll from 'smoothscroll-polyfill';
 import { HashRouter as Router } from 'react-router-dom';
 import './custom.scss';
 import './index.scss';
@@ -7,6 +8,9 @@ import './icons.scss';
 import App from './components';
 import * as serviceWorker from './serviceWorker';
 
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 window.onScrollActions = {};
 
